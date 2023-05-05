@@ -25,7 +25,7 @@ signalLength = size(hc,2)
 % najmensia perioda 1/30 a najvacsia perioda 1/5000
 l_lower = find(t >= 1/5000,1);
 l_upper = find(t > 1/30, 1) -1;
-l_vec = t(l_lower:l_upper); %nie vzdy bude posledny prvok rovny l_upper, ale najblizsi mensi / rovny co vyhovuje deleniu
+l_vec = t(l_lower:l_upper);
 l_vec_idx = l_lower:l_upper;
 H = zeros(signalLength,length(l_vec),numChannels);
 for k = 1:numChannels
